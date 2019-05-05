@@ -1,0 +1,72 @@
+// CSS variables/custom properties
+:root {
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark: #999;
+}
+// SASS variables 
+$color-primary: #c69963;
+$color-secondary: #101d2c;
+$color-grey-dark-2: #6d5d4b;
+
+// Utilities
+.u-margin-bottom-small {margin-bottom: 2.5rem;}
+.u-margin-bottom-medium {margin-bottom: 3.9rem;}
+
+/*
+$breakpoint argument choices:
+- phone -> 0-375px / 375px/16px = 23.43em
+-tablet -> 375px-768px / 768px/16px = 48em
+-desktop ->768px-1200px / 1200px/16px = 75em
+*/
+
+// $bp-desktop: 1200px; // 1200px
+// $bp-tablet: 768px; // 768px
+// $bp-phone: 375px; // 375px
+
+
+@mixin respond ($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 23.43em) { @content };
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 47em) { @content };
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 74em) { @content };
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond (desktop) {
+      font-size: 50%;
+    }
+
+    @include respond (tablet) {
+      font-size: 45%;
+    }
+  }
+  body {
+    background-color: $color-grey-dark-2;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+  }

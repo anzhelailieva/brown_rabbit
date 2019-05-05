@@ -1,0 +1,66 @@
+.content {
+  max-width: 120rem;
+  margin: 8rem auto;
+  min-height: 50rem;
+
+  @include respond(desktop) {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+// HEADER SECTION
+.header {
+  font-size: 1.4rem;
+  height: 60rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+  padding: 3rem 0 1rem 0;
+}
+// MAIN SECTION
+.detail {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  display: flex;
+  background-color: #fafafa;
+
+  @include respond(desktop) {
+    flex-direction: column;
+  }
+}
+.information {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-secondary;
+  color: var(--color-grey-dark);
+  padding: 6rem;
+
+  @include respond(desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: 1.5rem;
+  }
+
+  @include respond(tablet) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// LOGOS SECTION
+
+.container-fluid {
+  background-color: white;
+  padding: 2rem;
+}

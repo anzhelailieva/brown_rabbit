@@ -1,0 +1,369 @@
+// HEADER SECTION
+h1 {
+  font-size: 4rem;
+  color: var(--color-grey-dark);
+}
+.barista {
+  color: $color-grey-dark-2;
+}
+.logo {
+  font-size: 2.6rem;
+  padding-left: 4rem;
+  color: white;
+}
+.search {
+  position: relative;
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.4rem 2rem;
+    border-radius: 10rem;
+    width: 90%;
+    transition: all 0.2s;
+    margin-left: -3.5rem;
+    z-index: 0;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+      transition: all 0.2s;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+    z-index: 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark);
+  }
+}
+// NAVIGATION
+.bar {
+  display: flex;
+  flex-direction: row;
+  color: var(--color-grey-dark);
+
+  @include respond(desktop) {
+    flex-direction: column;
+  }
+}
+.moto {
+  display: flex;
+  margin-left: 4.2rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+}
+.nav-bar {
+  &__list {
+    display: flex;
+    margin-left: 5rem;
+    font-size: 1.7rem;
+
+    @include respond(tablet) {
+      flex-direction: column;
+    }
+
+    @include respond(desktop) {
+      margin-left: 3.2rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    margin-right: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: var(--color-grey-dark);
+      text-transform: uppercase;
+      padding: 0.5rem 0.5rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-grey-dark-2 50%
+      );
+      background-size: 260%;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      transform: translateX(1rem);
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+// HEADER INFORMATION
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 2rem 1rem 4rem;
+  margin-top: 30rem;
+
+  @include respond(desktop) {
+    padding: 0 2rem 1rem 4rem;
+  }
+
+  @include respond(tablet) {
+    flex-direction: column;
+    margin-top: 8rem;
+    align-items: stretch;
+  }
+}
+.header-paragraph {
+  color: var(--color-grey-dark);
+  font-size: 2.5rem;
+  width: 50%;
+
+  @include respond(tablet) {
+    width: 100%;
+  }
+}
+.icons {
+  &__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-grey-dark);
+    margin-right: 2rem;
+
+    &:hover {
+      fill: $color-grey-dark-2;
+      cursor: pointer;
+    }
+  }
+}
+// MAIN
+.description {
+  flex: 0 0 75%;
+
+  @include respond(desktop) {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+.heading-secondary {
+  font-size: 2.6rem;
+}
+.story {
+  width: 100%;
+  margin: 0 auto;
+  padding: 6rem;
+
+  @include respond(tablet) {
+    text-align: center;
+  }
+
+  &__shape {
+    width: 16rem;
+    height: 16rem;
+    float: left;
+    margin-right: 2rem;
+
+    @include respond(tablet) {
+      float: none;
+      margin: 2rem auto;
+    }
+  }
+
+  &__img {
+    height: 16rem;
+    width: 16rem;
+    box-shadow: 0 1.5rem 4rem $color-grey-dark-2;
+  }
+  &__post {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $color-grey-dark-2;
+  }
+  &__span {
+    font-weight: 500;
+  }
+}
+.morecontent span {
+  display: none;
+}
+.morelink {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-primary;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.info {
+  margin-bottom: 2.5rem;
+}
+.heading-tertiary {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+// Pagination
+.pagination-wrapper {
+  margin-left: 4.5rem;
+}
+.pagination li {
+  padding: 1rem 1.5rem;
+}
+
+.link {
+  &:link,
+  &:visited {
+    color: $color-primary;
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
+}
+.active {
+  background-color: $color-grey-dark-2;
+}
+
+// LOGOS SECTION
+
+.col-lg-2 {
+  @include respond(tablet) {
+    width: 50%;
+  }
+
+  &:hover .logo-img {
+    width: 100%;
+    height: 70%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+}
+.logo-img {
+  width: 100%;
+  height: 70%;
+  border: 2px solid #ccc;
+}
+.logo-heading {
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+// FOOTER
+
+.footer-container {
+  background-color: $color-secondary !important;
+  text-align: center;
+  color: var(--color-grey-dark);
+}
+h4 {
+  font-size: 2.2rem;
+}
+
+.footer-heading {
+  margin-bottom: 4rem;
+}
+
+.container-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.item {
+  width: 25%;
+  height: 25%;
+  margin: 0.5rem;
+}
+.footer-img {
+  width: 100%;
+  height: auto;
+}
+.footer-column {
+  @include respond(desktop) {
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+}
+.footer-row {
+  display: flex;
+  flex-direction: row;
+
+  @include respond(desktop) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.address {
+  font-size: 1.6rem;
+  margin: 5rem 4rem;
+  text-align: left;
+
+  @include respond(desktop) {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.contacts {
+  text-align: left;
+  margin: 0 4rem;
+
+  @include respond(desktop) {
+    text-align: center;
+  }
+}
+
+.about {
+  text-align: left;
+  font-size: 1.7rem;
+
+  @include respond(desktop) {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+mark {
+  background: $color-primary;
+  color: inherit;
+  padding: 0;
+}
